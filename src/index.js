@@ -12,7 +12,7 @@ const loop = () => {
 
     sendkeys(key).catch((e) => console.error(e)).finally(()=> {
 
-        const next = (base_interval + getRandomIntInclusive(0, 1000 * 60));
+        const next = (base_interval + getRandomIntInclusive(0, 60) * 1000);
 
         console.log(`sending char code ${key.charCodeAt(0)} in ${(next/1000)} seconds`);
 
@@ -22,7 +22,7 @@ const loop = () => {
     
 }
 
-const next = (base_interval + getRandomIntInclusive(0, 1000 * 60));
+const next = (base_interval + getRandomIntInclusive(0, 60) * 1000);
 
 console.log(`sending char code ${key.charCodeAt(0)} in ${(next/1000)} seconds`);
 
